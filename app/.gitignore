@@ -1,0 +1,38 @@
+# Environment
+.env
+
+# Logs
+*.log
+
+# Dependencies (ignore only if teammates will run composer install)
+# vendor/
+
+# Cache
+writable/cache/*
+!writable/cache/index.html
+
+# Sessions
+writable/session/*
+!writable/session/index.html
+
+# Logs
+writable/logs/*
+!writable/logs/index.html
+
+# Debugbar
+writable/debugbar/*
+!writable/debugbar/index.html
+
+# Uploads (optional)
+writable/uploads/*
+!writable/uploads/index.html
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Composer
+composer.phar
