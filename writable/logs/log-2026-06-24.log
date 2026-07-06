@@ -1,0 +1,350 @@
+ERROR - 2026-06-24 11:02:09 --> Error connecting to the database: mysqli_sql_exception: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#7 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#7 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-06-24 11:02:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Operation not permitted
+[Method: GET, Route: vehicles]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+ 7 SYSTEMPATH/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+ 8 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(66): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-06-24 11:02:09 --> Error connecting to the database: mysqli_sql_exception: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#7 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#7 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-06-24 11:02:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Operation not permitted
+[Method: GET, Route: vehicles]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+ 7 SYSTEMPATH/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+ 8 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(66): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-06-24 11:02:09 --> Error connecting to the database: mysqli_sql_exception: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#7 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#7 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-06-24 11:02:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Operation not permitted
+[Method: GET, Route: vehicles/piaggio-ape-e-city]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+ 7 SYSTEMPATH/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+ 8 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(66): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-06-24 11:02:09 --> Error connecting to the database: mysqli_sql_exception: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#7 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#7 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-06-24 11:02:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Operation not permitted
+[Method: GET, Route: electric-rickshaws]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+ 7 SYSTEMPATH/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+ 8 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(66): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-06-24 11:02:09 --> Error connecting to the database: mysqli_sql_exception: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#7 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#7 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-06-24 11:02:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Operation not permitted
+[Method: GET, Route: vehicles]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+ 7 SYSTEMPATH/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+ 8 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(66): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-06-24 11:02:09 --> Error connecting to the database: mysqli_sql_exception: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#7 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#7 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-06-24 11:02:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Operation not permitted
+[Method: GET, Route: electric-rickshaws]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+ 7 SYSTEMPATH/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+ 8 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(66): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-06-24 11:02:43 --> Error connecting to the database: mysqli_sql_exception: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#7 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Operation not permitted in /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+#3 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /home/u504377054/domains/charj.in/public_html/app/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+#6 /home/u504377054/domains/charj.in/public_html/app/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+#7 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+#8 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+#9 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/u504377054/domains/charj.in/public_html/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/u504377054/domains/charj.in/public_html/index.php(66): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2026-06-24 11:02:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Operation not permitted
+[Method: GET, Route: vehicles/ola-s1-pro]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/CategoryModel.php(82): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/BaseController.php(28): App\Models\CategoryModel->getTopLevel()
+ 7 SYSTEMPATH/CodeIgniter.php(945): App\Controllers\BaseController->initController()
+ 8 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(66): CodeIgniter\Boot::bootWeb()
