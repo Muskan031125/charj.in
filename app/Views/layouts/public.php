@@ -286,7 +286,9 @@ $transparentNav = $transparentNav ?? false;
       font-weight:700; font-size:.875rem;
       transition:all var(--t); text-decoration:none; background:transparent;
     }
-    .btn-outline:hover { background:rgba(0,230,118,.06); border-color:#00E676; color:#00C060; transform:translateY(-1px); }
+    .btn-outline:hover { backgrnavbar
+    
+  ound:rgba(0,230,118,.06); border-color:#00E676; color:#00C060; transform:translateY(-1px); }
 
     /* Ripple */
     .ripple-btn { position:relative; overflow:hidden; }
@@ -513,7 +515,7 @@ $transparentNav = $transparentNav ?? false;
       <!-- Desktop Navigation -->
       <?php $curUri = current_url(true)->getPath(); ?>
       <nav class="hidden md:flex items-center gap-0.5 flex-1 justify-center" aria-label="Main navigation">
-        <a href="<?= base_url('explore') ?>" class="nav-link <?= str_contains($curUri,'explore') ? 'nav-link-active' : '' ?>">Explore</a>
+        <a href="<?= base_url('explore') ?>" class="nav-link <?= str_contains($curUri,'explore') ? 'nav-link-active' : '' ?>">navigate</a>
         <?php
         $navLinks = [
           ['label'=>'EVs','href'=>base_url('vehicles')],
