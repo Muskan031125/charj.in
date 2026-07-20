@@ -8,7 +8,7 @@
     RewriteEngine On
 
     # Set the base path if the application is in a subdirectory.
-    RewriteBase /Charj/public/
+    RewriteBase /charj.in/public/
 
     # Redirect to HTTPS in production (uncomment when SSL is configured)
     # RewriteCond %{HTTPS} off
