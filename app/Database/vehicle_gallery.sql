@@ -1,0 +1,11 @@
+-- Charj.in — vehicle GALLERY images (real model photos). Adds gallery_json col if missing + fills. Run on prod DB.
+ALTER TABLE vehicles ADD COLUMN IF NOT EXISTS gallery_json TEXT NULL AFTER image_url;
+
+UPDATE vehicles SET gallery_json='[\"https://imgd.aeplcdn.com/664x374/n/cw/ec/1/versions/ather-450x-29-kwh-20251735974741344.jpg?q=80\",\"https://imgd.aeplcdn.com/664x374/n/cw/ec/147925/450x-left-rear-three-quarter.jpeg?isig=0&q=80\",\"https://imgd.aeplcdn.com/664x374/n/cw/ec/147925/450x-right-front-three-quarter.jpeg?isig=0&q=80\"]' WHERE slug='ather-450x';
+UPDATE vehicles SET gallery_json='[\"https://imgd.aeplcdn.com/664x374/n/cw/ec/1/versions/ola-s1-pro-gen-3-3-kwh1738318416778.jpg?q=80\",\"https://imgd.aeplcdn.com/1056x594/n/cw/ec/196991/s1-pro-left-side-view-3.png?isig=0&q=80&wm=3\"]' WHERE slug='ola-s1-pro';
+UPDATE vehicles SET gallery_json='[\"https://imgd.aeplcdn.com/664x374/n/cw/ec/1/versions/--22-kwh1747293190144.jpg?q=80\",\"https://imgd.aeplcdn.com/1280x720/n/cw/ec/140125/tvs-iqube-right-side-view4.jpeg?isig=0&wm=3&q=75\"]' WHERE slug='tvs-iqube';
+UPDATE vehicles SET gallery_json='[\"https://imgd.aeplcdn.com/664x374/n/bw/models/colors/revolt-select-model-pacific-blue-1706178230423.png?q=80\",\"https://imgd.aeplcdn.com/664x374/n/cw/ec/40710/rv-400-left-rear-three-quarter-6.jpeg?isig=0&q=80\",\"https://imgd.aeplcdn.com/664x374/n/cw/ec/40710/rv-400-right-front-three-quarter-2.jpeg?isig=0&q=80\"]' WHERE slug='revolt-rv400';
+UPDATE vehicles SET gallery_json='[\"https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Nexon-EV/11024/1755845297648/front-left-side-47.jpg\"]' WHERE slug='tata-nexon-ev';
+UPDATE vehicles SET gallery_json='[\"https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/ZS-EV/11503/1755845485024/front-left-side-47.jpg\",\"https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/ZS-EV/11503/1774615259175/exterior-image-164.jpg\"]' WHERE slug='mg-zs-ev';
+UPDATE vehicles SET gallery_json='[\"https://truckcdn.cardekho.com/in/mahindra/treo/mahindra-treo.jpg?imwidth=480&impolicy=resize\"]' WHERE slug='mahindra-treo';
+UPDATE vehicles SET gallery_json='[\"https://truckcdn.cardekho.com/in/piaggio/ape-e-city/piaggio-ape-e-city.jpg?imwidth=480&impolicy=resize\"]' WHERE slug='piaggio-ape-e-city';

@@ -41,9 +41,25 @@ $imgGrad = match($category) {
     default      => 'linear-gradient(145deg,#ECFDF5,#D1FAE5)',
 };
 
-$imgSrc    = !empty($vehicle['image_url'])
-    ? esc($vehicle['image_url'])
-    : base_url('assets/images/vehicles/'.esc($slug).'.webp');
+// Get main image from vehicle_images table
+$imgSrc = '';
+if (!empty($vehicle['id'])) {
+    $db = \Config\Database::connect();
+    $mainImage = $db->table('vehicle_images')
+        ->select('image_url')
+        ->where('vehicle_id', $vehicle['id'])
+        ->where('image_type', 'main')
+        ->get()
+        ->getRow();
+    $imgSrc = $mainImage ? $mainImage->image_url : '';
+}
+// Fallback to local if no image found
+if (empty($imgSrc)) {
+    $imgSrc = base_url('assets/images/vehicles/'.esc($slug).'.webp');
+} elseif (!preg_match('#^https?://#i', $imgSrc)) {
+    $imgSrc = base_url(ltrim($imgSrc, '/'));
+}
+$imgSrc = esc($imgSrc);
 $jsPrice   = (int)$price;
 $detailUrl = $slug ? base_url('vehicles/'.esc($slug)) : base_url('vehicles');
 
@@ -84,16 +100,18 @@ $jsDetailUrlJson = htmlspecialchars(json_encode($detailUrl), ENT_QUOTES, 'UTF-8'
 
     <div class="absolute inset-0 pointer-events-none" style="background-image:radial-gradient(rgba(0,230,118,.07) 1px,transparent 1px);background-size:16px 16px"></div>
 
+    <!-- Image with fallback -->
     <img id="vi-<?= esc($slug) ?>"
          src="<?= $imgSrc ?>"
          alt="<?= esc($name) ?>"
-         loading="lazy"
-         class="absolute inset-0 w-full h-full object-contain p-3 opacity-0"
-         style="transition:opacity .4s ease,transform .3s ease"
-         onload="this.style.opacity='1';this.classList.add('group-hover:scale-105');var f=document.getElementById('vf-<?= esc($slug) ?>');if(f)f.style.display='none'"
-         onerror="this.style.display='none'">
+         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110"
+         style="transition:transform .5s cubic-bezier(.22,1,.36,1)"
+         loading="eager"
+         decoding="async"
+         onerror="this.style.display='none';document.getElementById('vf-<?= esc($slug) ?>').style.display='flex'">
 
-    <div id="vf-<?= esc($slug) ?>" class="flex flex-col items-center gap-1 select-none z-10">
+    <!-- Fallback: Brand icon + name (shown if image fails to load) -->
+    <div id="vf-<?= esc($slug) ?>" class="flex flex-col items-center gap-1 select-none z-10" style="display:none">
       <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:linear-gradient(135deg,rgba(0,230,118,.18),rgba(0,230,118,.06));border:1.5px solid rgba(0,230,118,.2)">
         <svg class="w-6 h-6" style="color:#00C060" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
