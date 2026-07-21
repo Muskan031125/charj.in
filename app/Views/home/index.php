@@ -197,12 +197,9 @@
                style="background:rgba(0,168,150,.05);border:1.5px solid rgba(0,168,150,.1)"
                onmouseover="this.style.background='rgba(0,168,150,.12)';this.style.transform='scale(1.05)';this.style.borderColor='#00A896';this.style.transition='all 0.3s ease'"
                onmouseout="this.style.background='rgba(0,168,150,.05)';this.style.transform='scale(1)';this.style.borderColor='rgba(0,168,150,.1)'">
-              <div class="flex items-center gap-2">
-                <span class="text-2xl"><?= $em ?></span>
-                <div>
-                  <div class="text-xs font-bold" style="color:#0F172A"><?= $n ?></div>
-                  <div class="text-[10px]" style="color:#94A3B8"><?= $c ?></div>
-                </div>
+              <div class="flex flex-col items-center justify-center w-full text-center gap-1.5">
+                <span class="text-3xl"><?= $em ?></span>
+                <div class="text-xs font-bold" style="color:#0F172A"><?= $n ?></div>
               </div>
             </a>
             <?php endforeach; ?>
