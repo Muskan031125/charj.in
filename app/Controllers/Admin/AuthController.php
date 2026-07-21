@@ -41,7 +41,7 @@ class AuthController extends BaseController
             'admin_id'        => $user['id'],
             'admin_name'      => $user['name'],
             'admin_email'     => $user['email'],
-            'admin_role'      => $role,
+            'admin_role'      => $user['role'],
         ]);
 
         return redirect()->to(site_url('admin'))->with('success', 'Welcome back, ' . $user['name'] . '!');

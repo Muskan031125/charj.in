@@ -28,6 +28,9 @@
   @media(max-width:767px){ .stat-item:nth-child(even){ border-left:1px solid rgba(0,168,150,.1); } }
   /* Section divider */
   .section-divider { height:1px; background:linear-gradient(90deg,transparent,rgba(0,168,150,.15),transparent); }
+  /* Category card animations */
+  .category-card { transition:all 0.3s cubic-bezier(0.4,0,0.2,1); }
+  .category-card:hover { transform:translateY(-4px); box-shadow:0 12px 24px rgba(0,168,150,.15); }
 </style>
 <?= $this->endSection() ?>
 
@@ -182,21 +185,24 @@
           <a href="<?= base_url('vehicles') ?>" class="text-[10px] font-bold" style="color:#00A896">All →</a>
         </div>
         <div class="p-3 flex-1 flex flex-col">
-          <div class="grid grid-cols-2 gap-1.5 mb-3">
+          <div class="grid grid-cols-2 gap-2 mb-3">
             <?php foreach ([
-              ['🛵','2-Wheelers','80+ EVs',base_url('vehicles?category=electric-scooters')],
-              ['🛺','3-Wheelers','25+ EVs',base_url('vehicles?category=electric-rickshaws')],
-              ['🚗','4-Wheelers','30+ EVs',base_url('vehicles?category=electric-cars')],
-              ['🚛','Commercial','15+ EVs',base_url('vehicles?category=electric-buses')],
-            ] as [$em,$n,$c,$u]): ?>
-            <a href="<?= $u ?>" class="flex items-center gap-2 p-2 rounded-xl transition-all duration-150"
-               style="background:rgba(0,168,150,.05);border:1px solid rgba(0,168,150,.1)"
-               onmouseover="this.style.background='rgba(0,168,150,.12)';this.style.borderColor='#00A896'"
-               onmouseout="this.style.background='rgba(0,168,150,.05)';this.style.borderColor='rgba(0,168,150,.1)'">
-              <span class="text-base"><?= $em ?></span>
-              <div>
-                <div class="text-[10px] font-black leading-none" style="color:#0F172A"><?= $n ?></div>
-                <div class="text-[8px]" style="color:#94A3B8"><?= $c ?></div>
+              ['🛵','2-Wheelers','80+ EVs','electric-scooters'],
+              ['🛺','3-Wheelers','25+ EVs','electric-rickshaws'],
+              ['🚗','4-Wheelers','30+ EVs','electric-cars'],
+              ['🚛','Commercial','15+ EVs','electric-buses'],
+            ] as [$em,$n,$c,$cat]): ?>
+            <a href="<?= base_url('vehicles?category='.$cat) ?>"
+               class="group relative p-3 rounded-xl overflow-hidden transition-all duration-300 cursor-pointer"
+               style="background:rgba(0,168,150,.05);border:1.5px solid rgba(0,168,150,.1)"
+               onmouseover="this.style.background='rgba(0,168,150,.12)';this.style.transform='scale(1.05)';this.style.borderColor='#00A896';this.style.transition='all 0.3s ease'"
+               onmouseout="this.style.background='rgba(0,168,150,.05)';this.style.transform='scale(1)';this.style.borderColor='rgba(0,168,150,.1)'">
+              <div class="flex items-center gap-2">
+                <span class="text-2xl"><?= $em ?></span>
+                <div>
+                  <div class="text-xs font-bold" style="color:#0F172A"><?= $n ?></div>
+                  <div class="text-[10px]" style="color:#94A3B8"><?= $c ?></div>
+                </div>
               </div>
             </a>
             <?php endforeach; ?>
@@ -245,7 +251,7 @@
             <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-3" style="background:rgba(0,168,150,.08);border:1.5px solid rgba(0,168,150,.15)">
               <svg class="w-5 h-5" style="color:#00A896" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             </div>
-            <p class="text-xs font-semibold mb-1" style="color:#0F172A">Find Chargers Near You</p>
+            <p class="text-xs font-semibold mt-1" style="color:#0F172A">Find Chargers Near You</p>
             <p class="text-[10px] mb-3" style="color:#64748B">Public EV charging stations in 5 km radius</p>
             <?php foreach (['Delhi','Mumbai','Bangalore','Hyderabad'] as $city): ?>
             <a href="<?= base_url('charging-stations/'.strtolower($city)) ?>" class="inline-flex text-[9px] font-bold mr-1 mb-1 px-2 py-1 rounded-full"
@@ -287,39 +293,7 @@
         </div>
       </div>
 
-      <!-- ── PANEL 3: Subsidy Spotlight ── -->
-      <div class="relative overflow-hidden rounded-2xl flex flex-col overflow-hidden sr" style="background:#FFFFFF;border:1px solid rgba(0,168,150,.14);box-shadow:0 2px 12px rgba(0,168,150,.06)">
-        <div class="flex items-center justify-between px-4 py-2.5" style="background:rgba(0,168,150,.04);border-bottom:1px solid rgba(0,168,150,.09)">
-          <div class="flex items-center gap-2">
-            <span class="text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full" style="background:rgba(0,168,150,.1);color:#00A896;border:1px solid rgba(0,168,150,.2)">Subsidies</span>
-            <span class="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style="background:#00A896">LIVE</span>
-          </div>
-          <a href="<?= base_url('subsidy-calculator') ?>" class="text-[10px] font-bold" style="color:#00A896">Calculate →</a>
-        </div>
-        <div class="flex-1 px-4 py-3 flex flex-col" style="background:linear-gradient(135deg,#007a6e,#00A896,#00bfa5)">
-          <div class="absolute inset-0 pointer-events-none" style="background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);background-size:18px 18px"></div>
-          <p class="text-sm font-black text-white mb-0.5">Up to <span style="color:#b2f5ea">₹1.5 lakh off</span></p>
-          <p class="text-[10px] mb-3" style="color:rgba(255,255,255,.7)">FAME II · State grants · 80EEB tax deduction</p>
-          <div class="grid grid-cols-3 gap-1.5 mb-3">
-            <?php foreach (['🏙️ Delhi<br>₹1.55L','🌿 Gujarat<br>₹1.7L','🌆 K\'taka<br>₹10K'] as $pill): ?>
-            <div class="text-center rounded-xl py-1.5 px-1" style="background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2)">
-              <p class="text-white text-[9px] font-semibold leading-snug"><?= $pill ?></p>
-            </div>
-            <?php endforeach; ?>
-          </div>
-          <div class="flex items-start gap-2 rounded-xl px-3 py-2 mb-3" style="background:rgba(255,255,255,.12)">
-            <span class="text-xs flex-shrink-0">💡</span>
-            <p class="text-[9px] leading-relaxed text-white" style="opacity:.85">Stack FAME + state + 80EEB — most buyers miss all three</p>
-          </div>
-          <a href="<?= base_url('subsidy-calculator') ?>"
-             class="mt-auto flex items-center justify-center gap-1.5 bg-white font-bold text-xs rounded-xl py-2 w-full transition-all"
-             style="color:#007a6e"
-             onmouseover="this.style.boxShadow='0 4px 14px rgba(0,0,0,.2)'"
-             onmouseout="this.style.boxShadow=''">
-            Check My Subsidy →
-          </a>
-        </div>
-      </div>
+  
 
       <!-- ── PANEL 4: Best EVs ── -->
       <?php

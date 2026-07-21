@@ -196,7 +196,8 @@ $routes->get('explore', 'ExploreController::index');
 // -----------------------------------------------------------
 // Customer auth routes — disabled (public site, admin only)
 // -----------------------------------------------------------
-$routes->get('login',    function() { return redirect()->to(base_url()); });
+$routes->get('login',    'AuthController::login');
+$routes->post('login',   'AuthController::loginPost');
 $routes->get('register', function() { return redirect()->to(base_url()); });
 $routes->get('logout',   'AuthController::logout');   // logout still clears session
 $routes->get('profile',  function() { return redirect()->to(base_url()); });
