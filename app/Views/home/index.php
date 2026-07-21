@@ -411,12 +411,12 @@
       <?php foreach ($features as [$icon,$title,$desc,$url,$bg,$bd]): ?>
       <a href="<?= $url ?>"
          onclick="charjTrack('feature_click',{feature:'<?= addslashes(esc($title)) ?>'})"
-         class="group flex flex-col items-center text-center p-3 rounded-2xl transition-all duration-200"
-         style="background:<?= $bg ?>;border:1px solid <?= $bd ?>"
-         onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,.08)'"
-         onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div class="w-9 h-9 rounded-xl flex items-center justify-center text-lg mb-2 transition-transform duration-200 group-hover:scale-110"
-             style="background:#FFFFFF;border:1px solid <?= $bd ?>"><?= $icon ?></div>
+         class="group flex flex-col items-center text-center p-4 rounded-2xl transition-all duration-300 cursor-pointer"
+         style="background:<?= $bg ?>;border:1.5px solid <?= $bd ?>"
+         onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 16px 32px rgba(0,0,0,.12)';this.style.borderColor='rgba(0,168,150,.4)';this.style.background='rgba(0,168,150,.12)'"
+         onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='';this.style.borderColor='<?= $bd ?>';this.style.background='<?= $bg ?>'">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-2xl mb-2.5 transition-all duration-300 group-hover:scale-125 group-hover:rotate-6"
+             style="background:#FFFFFF;border:1.5px solid <?= $bd ?>"><?= $icon ?></div>
         <h3 class="font-black text-[11px] leading-snug mb-0.5" style="color:#0F172A"><?= esc($title) ?></h3>
         <p class="text-[9px] leading-snug" style="color:#64748B"><?= esc($desc) ?></p>
       </a>
